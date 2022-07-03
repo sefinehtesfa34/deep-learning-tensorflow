@@ -2,10 +2,10 @@
 Deep learning using Tensorflow<br> 
 In the translate folder, I trained a sequence to sequence (seq2seq) model for<br> Spanish to English translation based on Effective Approaches to Attention-based <br>Neural Machine Translation. This is an advanced example that assumes some knowledge of:
 <br>
-Sequence to sequence models<br>
-TensorFlow fundamentals below the keras layer:<br>
-Working with tensors directly<br>
-Writing custom keras.Models and keras.layers<br>
+==>Sequence to sequence models<br>
+==>TensorFlow fundamentals below the keras layer:<br>
+==>Working with tensors directly<br>
+==>Writing custom keras.Models and keras.layers<br>
 While this architecture is somewhat outdated it is still a very useful project to work through to get a deeper understanding of attention mechanisms (before going on to Transformers).
 
 After training the model in this notebook, you will be able to input a Spanish sentence, such as "¿todavia estan en casa?", and return the English translation: "are you still at home?"
