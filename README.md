@@ -39,3 +39,15 @@ After downloading the dataset, here are the steps we'll take to prepare the data
 The following diagram shows an overview of the model. At each time-step the decoder's output is combined with a weighted sum over the encoded input, to predict the next word. The diagram and formulas are from [Luong's paper](https://arxiv.org/abs/1508.04025v5).
 
 <img src="https://www.tensorflow.org/images/seq2seq/attention_mechanism.jpg" width="500" alt="attention mechanism">
+### The encoder
+
+Start by building the encoder, the blue part of the diagram above.
+
+The encoder:
+
+1. Takes a list of token IDs (from `input_text_processor`).
+3. Looks up an embedding vector for each token (Using a `layers.Embedding`).
+4. Processes the embeddings into a new sequence (Using a `layers.GRU`).
+5. Returns:
+  * The processed sequence. This will be passed to the attention head.
+  * The internal state. This will be used to initialize the decoder
