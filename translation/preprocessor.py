@@ -27,3 +27,15 @@ def load_data(path):
   targ = [targ for targ, inp in pairs]
 
   return targ, inp
+
+# Create a tf.data dataset
+# From these arrays of strings 
+# you can create a tf.data.Dataset of strings 
+# that shuffles and batches them efficiently:
+
+targ, inp = load_data(path_to_file)
+BUFFER_SIZE = len(inp)
+BATCH_SIZE = 64
+
+dataset = tf.data.Dataset.from_tensor_slices((inp, targ)).shuffle(BUFFER_SIZE)
+dataset = dataset.batch(BATCH_SIZE)
