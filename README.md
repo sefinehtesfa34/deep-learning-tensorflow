@@ -1,3 +1,5 @@
+<img src="https://www.tensorflow.org/images/seq2seq/attention_mechanism.jpg" width="500" alt="attention mechanism">
+
 # deep-learning-tensorflow
 Deep learning using Tensorflow<br> 
 In the <strong>translation folder</strong> above, I trained a sequence to sequence (seq2seq) model for<br> Spanish to English translation based on Effective Approaches to Attention-based <br>Neural Machine Translation. This is an advanced example that assumes some knowledge of:
