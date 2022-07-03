@@ -31,3 +31,9 @@ After downloading the dataset, here are the steps we'll take to prepare the data
 2. Clean the sentences by removing special characters.
 3. Create a word index and reverse word index (dictionaries mapping from word → id and id → word).
 4. Pad each sentence to a maximum length.
+
+## The encoder/decoder model
+
+The following diagram shows an overview of the model. At each time-step the decoder's output is combined with a weighted sum over the encoded input, to predict the next word. The diagram and formulas are from [Luong's paper](https://arxiv.org/abs/1508.04025v5).
+
+<img src="https://www.tensorflow.org/images/seq2seq/attention_mechanism.jpg" width="500" alt="attention mechanism">
