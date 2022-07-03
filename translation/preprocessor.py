@@ -23,8 +23,7 @@ def load_data(path):
   text = path.read_text(encoding='utf-8')
 
   lines = text.splitlines()
-  pairs = [line.split('\t') for line in lines]
-  print(pairs[:1])
+  pairs = [line.split('\t')[:2] for line in lines]
   inp = [inp for targ, inp in pairs]
   targ = [targ for targ, inp in pairs]
 
