@@ -74,4 +74,10 @@ The decoder's job is to generate predictions for the next output token.
 4. It combines the RNN output and the context vector using Equation 3 (below) to generate the "attention vector".
 5. It generates logit predictions for the next token based on the "attention vector".
 
+The **encoder** processes its full input sequence with a single call to its RNN. This implementation of the **decoder** _can_ do that as well for efficient training. But this tutorial will run the decoder in a loop for a few reasons:
+
+* Flexibility: Writing the loop gives you direct control over the training procedure.
+* Clarity: It's possible to do masking tricks and use `layers.RNN`, or `tfa.seq2seq` APIs to pack this all into a single call. But writing it out as a loop may be clearer. 
+  * Loop free training is demonstrated in the [Text generation](text_generation.ipynb) tutiorial.
+
 
