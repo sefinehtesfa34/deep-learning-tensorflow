@@ -3,6 +3,8 @@ import typing
 from typing import Any,Tuple 
 from translation.encoder import BahdanauAttention
 from shape_checker import ShapeChecker
+from text_vectorizer import input_text_processor,output_text_processor
+from encoder import embedding_dim,units
 # Here is the `Decoder` class and its initializer. 
 # The initializer creates all the necessary layers.
 class Decoder(tf.keras.layers.Layer):
@@ -83,3 +85,6 @@ def call(self,
   shape_checker(logits, ('batch', 't', 'output_vocab_size'))
 
   return DecoderOutput(logits, attention_weights), state
+Decoder.call = call
+decoder = Decoder(output_text_processor.vocabulary_size(),
+                  embedding_dim, units)
