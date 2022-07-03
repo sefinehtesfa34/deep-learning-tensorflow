@@ -16,7 +16,8 @@ The translation quality is reasonable for a toy example, but the generated atten
 
 ### Note: This example takes approximately 10 minutes to run on a single P100 GPU.
 The data
-We'll use a language dataset provided by <a href=">http://www.manythings.org/anki/">here</a> 
+We'll use a language dataset provided by <a href="http://www.manythings.org/anki/">here</a> 
+[here](http://www.manythings.org/anki/)
 This dataset contains language translation pairs in the format:
 
 
