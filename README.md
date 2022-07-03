@@ -1,6 +1,6 @@
 # deep-learning-tensorflow
 Deep learning using Tensorflow<br> 
-In the translate folder, I trained a sequence to sequence (seq2seq) model for<br> Spanish to English translation based on Effective Approaches to Attention-based <br>Neural Machine Translation. This is an advanced example that assumes some knowledge of:
+In the <strong>translation folder</strong> above, I trained a sequence to sequence (seq2seq) model for<br> Spanish to English translation based on Effective Approaches to Attention-based <br>Neural Machine Translation. This is an advanced example that assumes some knowledge of:
 * Sequence to sequence models<br>
 * TensorFlow fundamentals below the keras layer:<br>
 * Working with tensors directly<br>
