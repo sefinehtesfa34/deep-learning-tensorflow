@@ -39,3 +39,10 @@ BATCH_SIZE = 64
 
 dataset = tf.data.Dataset.from_tensor_slices((inp, targ)).shuffle(BUFFER_SIZE)
 dataset = dataset.batch(BATCH_SIZE)
+
+# Standardization
+# The model is dealing with multilingual text with a limited vocabulary. 
+# So it will be important to standardize the input text.
+# The first step is Unicode normalization to split accented characters 
+# and replace compatibility characters with their ASCII equivalents.
+# The tensorflow_text package contains a unicode normalize operation:
