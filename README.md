@@ -13,3 +13,5 @@ The resulting model is exportable as a tf.saved_model, so it can be used in othe
 
 The translation quality is reasonable for a toy example, but the generated attention plot is perhaps more interesting. This shows which parts of the input sentence has the model's attention while translating:
 <image src="translation/image.png">
+
+# Note: This example takes approximately 10 minutes to run on a single P100 GPU.
