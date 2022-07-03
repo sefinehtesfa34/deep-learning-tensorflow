@@ -64,9 +64,6 @@ The attention takes a sequence of vectors as input for each example and returns 
 
 Let's look at how this works:
 
-<img src="images/attention_equation_1.jpg" alt="attention equation 1" width="800">
-
-<img src="images/attention_equation_2.jpg" alt="attention equation 2" width="800">
 ### The decoder
 
 The decoder's job is to generate predictions for the next output token.
@@ -77,5 +74,4 @@ The decoder's job is to generate predictions for the next output token.
 4. It combines the RNN output and the context vector using Equation 3 (below) to generate the "attention vector".
 5. It generates logit predictions for the next token based on the "attention vector".
 
-<img src="images/attention_equation_3.jpg" alt="attention equation 3" width="800">
 
