@@ -53,3 +53,17 @@ The encoder:
 5. Returns:
   * The processed sequence. This will be passed to the attention head.
   * The internal state. This will be used to initialize the decoder
+The encoder returns its internal state so that its state can be used to initialize the decoder.
+
+It's also common for an RNN to return its state so that it can process a sequence over multiple calls. You'll see more of that building the decoder.
+
+### The attention head
+
+The decoder uses attention to selectively focus on parts of the input sequence.
+The attention takes a sequence of vectors as input for each example and returns an "attention" vector for each example. This attention layer is similar to a `layers.GlobalAveragePoling1D` but the attention layer performs a _weighted_ average.
+
+Let's look at how this works:
+
+<img src="images/attention_equation_1.jpg" alt="attention equation 1" width="800">
+
+<img src="images/attention_equation_2.jpg" alt="attention equation 2" width="800">
