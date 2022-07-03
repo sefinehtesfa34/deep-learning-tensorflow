@@ -15,3 +15,19 @@ The translation quality is reasonable for a toy example, but the generated atten
 <image src="translation/image.png">
 
 ### Note: This example takes approximately 10 minutes to run on a single P100 GPU.
+The data
+We'll use a language dataset provided by <a href=">http://www.manythings.org/anki/">here</a> 
+This dataset contains language translation pairs in the format:
+
+
+### May I borrow this book? ¿Puedo tomar prestado este libro?
+
+They have a variety of languages available, but we'll use the English-Spanish dataset.
+
+Download and prepare the dataset
+After downloading the dataset, here are the steps we'll take to prepare the data:
+
+1. Add a start and end token to each sentence.
+2. Clean the sentences by removing special characters.
+3. Create a word index and reverse word index (dictionaries mapping from word → id and id → word).
+4. Pad each sentence to a maximum length.
