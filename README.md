@@ -67,3 +67,15 @@ Let's look at how this works:
 <img src="images/attention_equation_1.jpg" alt="attention equation 1" width="800">
 
 <img src="images/attention_equation_2.jpg" alt="attention equation 2" width="800">
+### The decoder
+
+The decoder's job is to generate predictions for the next output token.
+
+1. The decoder receives the complete encoder output.
+2. It uses an RNN to keep track of what it has generated so far.
+3. It uses its RNN output as the query to the attention over the encoder's output, producing the context vector.
+4. It combines the RNN output and the context vector using Equation 3 (below) to generate the "attention vector".
+5. It generates logit predictions for the next token based on the "attention vector".
+
+<img src="images/attention_equation_3.jpg" alt="attention equation 3" width="800">
+

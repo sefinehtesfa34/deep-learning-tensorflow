@@ -1,5 +1,5 @@
 import tensorflow as tf
-from translation.shape_checker import ShapeChecker
+from shape_checker import ShapeChecker
 from text_vectorizer import input_text_processor,output_text_processor
 embedding_dim = 256
 units = 1024
@@ -75,3 +75,4 @@ class BahdanauAttention(tf.keras.layers.Layer):
     shape_checker(attention_weights, ('batch', 't', 's'))
 
     return context_vector, attention_weights
+attention_layer = BahdanauAttention(units)
